@@ -1,0 +1,169 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #231F20;
+}
+
+
+ul { 
+  margin: 50px auto 0; 
+  padding: 0; 
+  list-style: none; 
+  color: white;
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
+}
+
+h1 {
+  color: black;
+  margin: 2px;
+}
+
+p {
+  color:black;
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+}
+
+h4 {
+  font-size: 58px;
+  margin-left: 30px;
+}
+
+header {
+  background-color: #353535;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  margin-right: 1rem;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section {
+  padding: 2rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  color: #3C6E71;
+}
+
+section ul {
+  list-style: none;
+  color:#3C6E71;
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #89B6A5;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+
+.bento-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.project p {
+  margin-bottom: 10px;
+}
