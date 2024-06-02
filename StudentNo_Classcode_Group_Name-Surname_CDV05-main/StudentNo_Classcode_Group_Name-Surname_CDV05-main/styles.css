@@ -229,3 +229,39 @@ footer {
 .project p {
   margin-bottom: 10px;
 }
+
+.card{
+  width:calc(50% - 1rem);
+  background:var(--w);
+  border-radius:calc(25px - 1rem);
+  box-shadow:1px 1px 2px rgba(0,0,0,.1),2px 2px 4px 1px rgba(0,0,0,.3)
+ }
+
+.card-header img{
+  width:100%;
+  border-radius:calc(25px - 1rem) calc(25px - 1rem) 0 0
+}
+
+.card-body{
+  padding:var(--p0) var(--p1);
+  
+}
+
+h4 a:not(:hover), h3 a:not(:hover){
+  color:var(--k);
+  text-decoration:none;
+ }
+a:hover{
+  color:var(--k)
+}
+.card-body a{
+  text-decoration:none;
+  color:var(--a);
+  }
+
+
+h3{
+  font-size:1.5vw;
+   margin:0.5rem 0 1rem
+}
+
