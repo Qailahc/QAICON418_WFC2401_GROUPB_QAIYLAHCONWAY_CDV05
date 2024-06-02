@@ -1,10 +1,11 @@
-/* Reset CSS */
+/* Universal Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -12,32 +13,35 @@ body {
   color: #231F20;
 }
 
-
-ul { 
-  margin: 50px auto 0; 
-  padding: 0; 
-  list-style: none; 
+/* Navigation Styles */
+ul {
+  margin: 50px auto 0;
+  padding: 0;
+  list-style: none;
   color: white;
-  display: table;
-  width: 600px;
+  display: block;
+  width: 100%; /* Change width to 100% for responsiveness */
   text-align: center;
 }
-li { 
-  display: table-cell; 
-  position: relative; 
+li {
+  display: block;
+  margin-bottom: 10px; /* Add spacing between list items */
+  position: relative;
   padding: 15px 0;
 }
+
+/* Anchor Styles (Navigation Links)*/
 a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  
   display: inline-block;
   padding: 15px 20px;
   position: relative;
 }
-a:after {    
+/* Anchor Hover Styles*/
+a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -49,15 +53,25 @@ a:after {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-a:hover:after { 
-  width: 100%; 
-  left: 0; 
+a:hover:after {
+  width: 100%;
+  left: 0;
 }
-@media screen and (max-height: 300px) {
-	ul {
-		margin-top: 40px;
-	}
+/* Media Query for Responsive Navigation */
+@media screen and (max-width: 600px) { /* Adjust max-width to target smaller screens */
+  ul {
+    margin-top: 40px;
+    display: block; /* Change display to block for smaller screens */
+    width: auto; /* Reset width to auto */
+  }
+  li {
+    display: block; /* Change display to block for smaller screens */
+    margin-bottom: 10px; /* Add spacing between list items */
+  }
 }
+
+
+
 
 h1 {
   color: black;
@@ -71,9 +85,20 @@ p {
 
 }
 
+p2 {
+  color: white;
+}
+
 h4 {
   font-size: 58px;
   margin-left: 30px;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 200;
+  margin-left: 40px;
+  color:#89B6A5;
 }
 
 header {
@@ -105,12 +130,12 @@ section {
 
 section h2 {
   margin-bottom: 1rem;
-  color: #3C6E71;
+  color: #427375;
 }
 
 section ul {
   list-style: none;
-  color:#3C6E71;
+  color:#427375;
 }
 
 footer {
@@ -118,6 +143,43 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem;
+}
+
+#contactForm .box{
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 3vmin;
+  opacity: 0.5;
+  padding: 1.5vmin;
+  box-sizing: border-box;
+  margin: 2vmin 0;
+}
+#contactForm .box:focus {
+  opacity: 1;
+}
+
+#contactForm #message {
+  min-height: 25vmin;
+}
+
+#contactForm .btn {
+  background: #2e5052;
+  opacity: 0.5;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+}
+#contactForm .btn:hover {
+  opacity: 1;
+}
+
+#contactForm p {
+  display: inline;
+  font-size: 3vmin;
+  font-family: Arial;
+  opacity: 0.5;
 }
 
 .btn {
