@@ -19,18 +19,18 @@ ul {
   padding: 0;
   list-style: none;
   color: white;
-  display: block;
-  width: 100%; /* Change width to 100% for responsiveness */
-  text-align: center;
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+  align-items: center;
 }
+
 li {
-  display: block;
-  margin-bottom: 10px; /* Add spacing between list items */
+  margin-bottom: 10px;
   position: relative;
   padding: 15px 0;
 }
 
-/* Anchor Styles (Navigation Links)*/
+/* Anchor Styles (Navigation Links) */
 a {
   color: #fff;
   text-transform: uppercase;
@@ -40,7 +40,8 @@ a {
   padding: 15px 20px;
   position: relative;
 }
-/* Anchor Hover Styles*/
+
+/* Anchor Hover Styles */
 a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -57,21 +58,22 @@ a:hover:after {
   width: 100%;
   left: 0;
 }
+
 /* Media Query for Responsive Navigation */
-@media screen and (max-width: 600px) { /* Adjust max-width to target smaller screens */
+@media screen and (max-width: 600px) {
   ul {
-    margin-top: 40px;
-    display: block; /* Change display to block for smaller screens */
-    width: auto; /* Reset width to auto */
+    flex-direction: column; /* Stack navigation links vertically */
+    text-align: center; /* Center align navigation links */
   }
+  
   li {
-    display: block; /* Change display to block for smaller screens */
-    margin-bottom: 10px; /* Add spacing between list items */
+    margin-bottom: 10px;
+  }
+
+  a {
+    padding: 10px 0; /* Reduce padding for smaller screens */
   }
 }
-
-
-
 
 h1 {
   color: black;
@@ -125,7 +127,10 @@ header ul li a {
 }
 
 section {
-  padding: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px; /* Optional: adds rounded corners */
+  padding: 20px; /* Optional: adds spacing inside the sections */
+  margin-bottom: 20px; /* Optional: adds spacing between sections */
 }
 
 section h2 {
@@ -133,23 +138,78 @@ section h2 {
   color: #427375;
 }
 
-section ul {
-  list-style: none;
-  color:#427375;
+.about-container {
+  display: flex;
+  align-items: center;
 }
 
+.portfolio-picture {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 20px; /* Space between image and text */
+}
+
+.about-text {
+  max-width: 600px; /* Adjust as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .portfolio-picture {
+      margin-right: 0;
+      margin-bottom: 20px; /* Space between image and text */
+  }
+}
+
+/* Skills Section */
+#skills ul {
+  margin-top: 20px; /* Add space above the list items */
+  color: #427375;
+}
+
+#skills li {
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+/* Media Query for larger screens */
+@media screen and (min-width: 768px) {
+  #skills ul {
+    margin-top: 0; /* Reset margin for larger screens */
+    display: flex; /* Change display to flex */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+
+  #skills li {
+    width: 48%; /* Set width to fit two items per row */
+    margin-bottom: 20px; /* Add space between list items */
+  }
+}
+
+
+/* Footer Section */
 footer {
   background-color: #353535;
   color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
 }
+
 
 #contactForm .box{
   display: block;
   width: 100%;
   background: transparent;
-  color: #fff;
+  color: #0e0c0c;
   font-size: 3vmin;
   opacity: 0.5;
   padding: 1.5vmin;
@@ -230,38 +290,40 @@ footer {
   margin-bottom: 10px;
 }
 
-.card{
-  width:calc(50% - 1rem);
-  background:var(--w);
-  border-radius:calc(25px - 1rem);
-  box-shadow:1px 1px 2px rgba(0,0,0,.1),2px 2px 4px 1px rgba(0,0,0,.3)
- }
-
-.card-header img{
-  width:100%;
-  border-radius:calc(25px - 1rem) calc(25px - 1rem) 0 0
+.card {
+  width: 100%; /* Make the card width responsive */
+  max-width: 600px; /* Limit the maximum width to 600px */
+  margin: 0 auto; /* Center the card horizontally */
+  background: var(--w);
+  border-radius: calc(25px - 1rem);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .1), 2px 2px 4px 1px rgba(0, 0, 0, .3);
 }
 
-.card-body{
-  padding:var(--p0) var(--p1);
-  
+.card-header img {
+  width: 100%;
+  border-radius: calc(25px - 1rem) calc(25px - 1rem) 0 0;
 }
 
-h4 a:not(:hover), h3 a:not(:hover){
-  color:var(--k);
-  text-decoration:none;
- }
-a:hover{
-  color:var(--k)
-}
-.card-body a{
-  text-decoration:none;
-  color:var(--a);
-  }
-
-
-h3{
-  font-size:1.5vw;
-   margin:0.5rem 0 1rem
+.card-body {
+  padding: var(--p0) var(--p1);
 }
 
+h4 a:not(:hover),
+h3 a:not(:hover) {
+  color: var(--k);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--k);
+}
+
+.card-body a {
+  text-decoration: none;
+  color: var(--a);
+}
+
+h3 {
+  font-size: 1.5vw;
+  margin: 0.5rem 0 1rem;
+}
